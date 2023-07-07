@@ -3,8 +3,15 @@ import { DefaultTheme } from "styled-components";
 const dark: DefaultTheme = {
     name: "dark",
     palette: {
+
+        logoColor: "#F2F2F2",
         background: "#0A090D",
         textColor: "#E5E5E5",
+
+        primaryColor: "#DFD1A7",
+        secondaryColor: "#DFD1A7",
+
+        navColor: "#0A090D",
 
         common: {
             black: {
@@ -23,6 +30,10 @@ const dark: DefaultTheme = {
 
             yellow: {
                 400: "#DFD1A7", 
+            },
+
+            orange: {
+                400: "#CDA177"
             },
 
             white: {

@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+  :root {
+    font-size: 16px;
+  }
+
   body {
     background-color: ${(props) => props.theme.palette.background};
 
@@ -17,6 +22,14 @@ const GlobalStyle = createGlobalStyle`
 
     color: ${(props) => props.theme.palette.textColor};
     transition: color .2s ease-in;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img, svg {
+    color: ${(props) => props.theme.palette.logoColor}
   }
 `;
 

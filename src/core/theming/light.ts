@@ -3,8 +3,15 @@ import { DefaultTheme } from "styled-components";
 const light: DefaultTheme = {
     name: "light",
     palette: {
+        logoColor: "#393939",
         background: "#FFFFFF",
         textColor: "#393939",
+
+        primaryColor: "#DFD1A7",
+        secondaryColor: "#CDA177",
+
+        navColor: "#FFFFFF",
+
         common: {
             black: {
                 900: "#0A090D",
@@ -22,6 +29,10 @@ const light: DefaultTheme = {
 
             yellow: {
                 400: "#DFD1A7", 
+            },
+
+            orange: {
+                400: "#CDA177",
             },
 
             white: {

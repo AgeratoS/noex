@@ -9,16 +9,25 @@ declare module 'styled-components' {
         name: string;
 
         palette: {
+
+            logoColor: Color;
+
             common: {
                 black: ColorSet;
                 grey: ColorSet;
                 green: ColorSet;
                 yellow: ColorSet;
                 white: ColorSet;
+                orange: ColorSet;
             },
 
             background: Color;
             textColor: Color;
+
+            primaryColor: Color;
+            secondaryColor: Color;
+
+            navColor: Color;
         },
 
         typography: {
