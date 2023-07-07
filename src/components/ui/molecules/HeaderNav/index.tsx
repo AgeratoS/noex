@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.nav``;
@@ -14,8 +14,13 @@ const NavList = styled.ul`
 
 const NavListItem = styled.li``;
 
-const NavListItemLink = styled(Link)`
+const NavListItemLink = styled(NavLink)`
   color: ${(props) => props.theme.palette.textColor};
+  transition: all 0.2s ease-in;
+  &:hover,
+  &.active {
+    color: ${(props) => props.theme.palette.primaryColor};
+  }
 
   font-family: Montserrat;
   font-size: 1rem;
