@@ -63,7 +63,7 @@ const FooterNav = () => {
       <FooterNavListPartition>
         <FooterMenu>
           <FooterMenuItem>
-            <FooterMenuLink to="/">Цены</FooterMenuLink>
+            <FooterMenuLink to="/prices">Цены</FooterMenuLink>
           </FooterMenuItem>
           <FooterMenuItem>
             <FooterMenuLink to="/articles">Статьи</FooterMenuLink>

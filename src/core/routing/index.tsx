@@ -10,6 +10,7 @@ import Article from "../../components/pages/Article";
 import Vacancies from "../../components/pages/Vacancies";
 import Vacancy from "../../components/pages/Vacancy";
 import Contacts from "../../components/pages/Contacts";
+import Prices from "../../components/pages/Prices";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
   {
     path: "/services",
     element: <Services />,
+  },
+
+  {
+    path: "/prices",
+    element: <Prices />,
   },
 
   {

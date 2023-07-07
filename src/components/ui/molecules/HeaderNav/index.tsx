@@ -38,7 +38,7 @@ const HeaderNav = () => {
           <NavListItemLink to="/services">Услуги</NavListItemLink>
         </NavListItem>
         <NavListItem>
-          <NavListItemLink to="#">Цены</NavListItemLink>
+          <NavListItemLink to="/prices">Цены</NavListItemLink>
         </NavListItem>
         <NavListItem>
           <NavListItemLink to="/articles">Статьи</NavListItemLink>
