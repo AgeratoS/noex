@@ -1,21 +1,8 @@
-import { ThemeProvider, createGlobalStyle } from "styled-components";
-import router from "./core/routing";
+import { ThemeProvider } from "styled-components";
 import { RouterProvider } from "react-router-dom";
+import router from "./core/routing";
 import useTheme from "./core/hooks/useTheme";
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${(props) => props.theme.palette.background};
-
-    transition: background-color .2s ease-in;
-  }
-
-  h1, h2, h3, h4, h5, h6, p, span {
-    color: ${(props) => props.theme.palette.textColor};
-
-    transition: color .2s ease-in;
-  }
-`;
+import { GlobalStyle } from "./core/theming";
 
 function App() {
   const theme = useTheme();

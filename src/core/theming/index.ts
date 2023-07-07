@@ -2,6 +2,7 @@ import 'styled-components';
 import { DefaultTheme } from 'styled-components/dist/types';
 import dark from './dark';
 import light from './light';
+import GlobalStyle from './GlobalStyle';
 
 declare module 'styled-components' {
     export interface DefaultTheme {
@@ -22,8 +23,16 @@ declare module 'styled-components' {
 
         typography: {
 
+            paragraph: {
+                fontFamily: string;
+                fontStyle: string;
+                fontWeight: string | number;
+            }
+
             common: {
-                abc: string;
+                fontFamily: string;
+                fontStyle: string;
+                fontWeight: string | number;
             }
         }
     }
@@ -34,4 +43,4 @@ type ColorSet = {
 }
 type Color = string;
 
-export { dark, light }
+export { dark, light, GlobalStyle }

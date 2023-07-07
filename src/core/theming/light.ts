@@ -33,7 +33,14 @@ const light: DefaultTheme = {
 
     typography: {
         common: {
-            abc: "abc"
+            fontFamily: "Courier New",
+            fontStyle: "normal",
+            fontWeight: 400
+        },
+        paragraph: {
+            fontFamily: "Courier New",
+            fontStyle: "normal",
+            fontWeight: 400
         }
     }
 }
