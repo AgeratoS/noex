@@ -1,8 +1,7 @@
 import styled, { useTheme } from "styled-components";
-import logo from "../../../../../public/images/logo.svg";
 import { Link } from "react-router-dom";
 
-const LogoText = styled.span`
+export const LogoText = styled.span`
   color: ${({ theme }) => theme.palette.logoColor};
   font-family: Montserrat;
   font-size: 2.36513rem;
@@ -18,11 +17,11 @@ const LogoWrapper = styled(Link)`
   align-items: center;
 `;
 
-const Logo = () => {
+const Logo = (props: any) => {
   const theme = useTheme();
 
   return (
-    <LogoWrapper to="/">
+    <LogoWrapper to="/" {...props}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="39"

@@ -28,6 +28,11 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  ul, ol, dl {
+    margin: 0;
+    padding: 0;
+  }
+
   img, svg {
     color: ${(props) => props.theme.palette.logoColor}
   }
