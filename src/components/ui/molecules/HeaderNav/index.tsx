@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.nav``;
@@ -13,7 +14,7 @@ const NavList = styled.ul`
 
 const NavListItem = styled.li``;
 
-const NavListItemLink = styled.a`
+const NavListItemLink = styled(Link)`
   color: ${(props) => props.theme.palette.textColor};
 
   font-family: Montserrat;
@@ -28,25 +29,25 @@ const HeaderNav = () => {
     <HeaderWrapper>
       <NavList>
         <NavListItem>
-          <NavListItemLink href="/projects">Проекты</NavListItemLink>
+          <NavListItemLink to="/projects">Проекты</NavListItemLink>
         </NavListItem>
         <NavListItem>
-          <NavListItemLink href="/about">О нас</NavListItemLink>
+          <NavListItemLink to="/about">О нас</NavListItemLink>
         </NavListItem>
         <NavListItem>
-          <NavListItemLink href="/services">Услуги</NavListItemLink>
+          <NavListItemLink to="/services">Услуги</NavListItemLink>
         </NavListItem>
         <NavListItem>
-          <NavListItemLink href="#">Цены</NavListItemLink>
+          <NavListItemLink to="#">Цены</NavListItemLink>
         </NavListItem>
         <NavListItem>
-          <NavListItemLink href="/articles">Статьи</NavListItemLink>
+          <NavListItemLink to="/articles">Статьи</NavListItemLink>
         </NavListItem>
         <NavListItem>
-          <NavListItemLink href="/vacancies">Вакансии</NavListItemLink>
+          <NavListItemLink to="/vacancies">Вакансии</NavListItemLink>
         </NavListItem>
         <NavListItem>
-          <NavListItemLink href="/contacts">Контакты</NavListItemLink>
+          <NavListItemLink to="/contacts">Контакты</NavListItemLink>
         </NavListItem>
       </NavList>
     </HeaderWrapper>

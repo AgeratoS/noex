@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import Header from "../ui/organisms/Header";
 import Footer from "../ui/organisms/Footer";
 import styled from "styled-components";
+import Fade from "../ui/atoms/Fade";
 
 const MainLayoutWrapper = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const MainLayoutWrapper = styled.div`
   min-height: 100vh;
 `;
 
-const ContentLayout = styled.div`
+const ContentLayout = styled(Fade)`
   flex: 1;
 `;
 
