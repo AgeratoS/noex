@@ -1,18 +1,16 @@
 import MainLayout from "../../layouts/MainLayout";
-import Paragraph from "../../ui/atoms/Paragraph";
+import Container from "../../ui/atoms/Container";
+import { ContainerMode } from "../../ui/atoms/Container/type";
+import EngineerSurveyDescription from "../../ui/organisms/EngineerSurveyDescription";
+import EngineerSurveyPurpose from "../../ui/organisms/EngineerSurveyPurpose";
 
 const MainPage = () => {
   return (
     <MainLayout>
-      <Paragraph>
-        Проведение инженерных работ позволяет получить объем необходимых данных
-        для аргументирования технической возможности и экономической
-        целесообразности проектирования и застройки на конкретной территории.
-        Информировать о возможных рисках и изменениях геологической ситуации и
-        окружающей среды, связанных со строительством и эксплуатацией объекта,
-        разработать мероприятия по охране и защите природы и населения от
-        влияния техногенных факторов.
-      </Paragraph>
+      <Container mode={ContainerMode.CONTAINER}>
+        <EngineerSurveyPurpose />
+        <EngineerSurveyDescription />
+      </Container>
     </MainLayout>
   );
 };

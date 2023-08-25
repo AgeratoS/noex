@@ -10,6 +10,10 @@ const Paragraph = styled.p`
   font-weight: ${(props) => props.theme.typography.paragraph.fontWeight};
 
   line-height: 160%;
+
+  & + & {
+    margin: 1.88rem 0;
+  }
 `;
 
 export default Paragraph;

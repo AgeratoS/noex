@@ -1,5 +1,7 @@
-import { HTMLAttributes } from "react";
+export type TitleProps = {
+    level: 1 | 2;
+}
 
-export type TitleProps = HTMLAttributes<HTMLHeadingElement> & {
-    level: 1 | 2,
+export type StyledTitleProps = {
+    [T in keyof TitleProps as `$${T}`]: TitleProps[T]
 }
