@@ -1,8 +1,9 @@
 import { ThemeProvider } from "styled-components";
-import { RouterProvider } from "react-router-dom";
-import router from "./core/routing";
+import { BrowserRouter } from "react-router-dom";
 import useTheme from "./core/hooks/useTheme";
 import { GlobalStyle } from "./core/theming";
+import AnimatedRouting from "./core/routing";
+
 
 function App() {
   const theme = useTheme();
@@ -10,7 +11,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <RouterProvider router={router} />
+      <BrowserRouter>
+        <AnimatedRouting />
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

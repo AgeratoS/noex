@@ -1,4 +1,5 @@
-import { createBrowserRouter } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Projects from "../../components/pages/Projects";
 import MainPage from "../../components/pages/Main";
 import ProjectPage from "../../components/pages/Project";
@@ -12,66 +13,27 @@ import Vacancy from "../../components/pages/Vacancy";
 import Contacts from "../../components/pages/Contacts";
 import Prices from "../../components/pages/Prices";
 
-const router = createBrowserRouter([
-  {
-    path: "/projects",
-    element: <Projects />,
-  },
+const AnimatedRouting = () => {
+  const location = useLocation();
 
-  {
-    path: "/projects/:id",
-    element: <ProjectPage />,
-  },
+  return (
+    <AnimatePresence mode="wait">
+      <Routes key={location.pathname} location={location}>
+        <Route path="projects" Component={Projects} />
+        <Route path="projects/:id" Component={ProjectPage} />
+        <Route path="about" Component={AboutUs} />
+        <Route path="prices" Component={Prices} />
+        <Route path="services" Component={Services} />
+        <Route path="services/:id" Component={Service} />
+        <Route path="articles" Component={Articles} />
+        <Route path="articles/:id" Component={Article} />
+        <Route path="vacancies" Component={Vacancies} />
+        <Route path="vacancies/:id" Component={Vacancy} />
+        <Route path="contacts" Component={Contacts} />
+        <Route path="/" Component={MainPage} index />
+      </Routes>
+    </AnimatePresence>
+  )
+}
 
-  {
-    path: "/about",
-    element: <AboutUs />,
-  },
-
-  {
-    path: "/services",
-    element: <Services />,
-  },
-
-  {
-    path: "/prices",
-    element: <Prices />,
-  },
-
-  {
-    path: "/services/:id",
-    element: <Service />,
-  },
-
-  {
-    path: "/articles",
-    element: <Articles />,
-  },
-
-  {
-    path: "/articles/:id",
-    element: <Article />,
-  },
-
-  {
-    path: "/vacancies",
-    element: <Vacancies />,
-  },
-
-  {
-    path: "/vacancies/:id",
-    element: <Vacancy />,
-  },
-
-  {
-    path: "/contacts",
-    element: <Contacts />,
-  },
-
-  {
-    path: "/",
-    element: <MainPage />,
-  },
-]);
-
-export default router;
+export default AnimatedRouting;
