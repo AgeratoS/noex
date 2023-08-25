@@ -29,7 +29,7 @@ const dark: DefaultTheme = {
             },
 
             yellow: {
-                400: "#DFD1A7", 
+                400: "#DFD1A7",
             },
 
             orange: {
@@ -37,8 +37,8 @@ const dark: DefaultTheme = {
             },
 
             white: {
-                400_20: "#FFFFFF33",
-                400_50: "#FFFFFF80",
+                "400_20": "#FFFFFF33",
+                "400_50": "#FFFFFF80",
             }
         }
     },
